@@ -1,0 +1,26 @@
+// Copyright © Protectoria. All rights reserved.
+
+#import <Foundation/Foundation.h>
+
+#ifndef PSALog_h
+#define PSALog_h
+
+#ifdef DEBUG
+#define PSALog(args...) [PSALog info:__FILE__ :__LINE__ :__PRETTY_FUNCTION__ :args]
+#else
+#define PSALog(...)
+#endif
+
+@protocol PSALogger
+- (void)info:(nullable NSString *)file
+            :(int)lineNumber
+            :(nullable NSString *)functionName
+            :(nullable NSString *)message;
+@end
+NS_ASSUME_NONNULL_BEGIN
+@interface PSALog : NSObject
++ (void)initWithLogger:(id<PSALogger>)logger;
++ (void)info:(const char *)file :(int)lineNumber :(const char *)function :(NSString *)format, ...;
+@end
+NS_ASSUME_NONNULL_END
+#endif /* PSALog_h */
