@@ -3,6 +3,7 @@
 import PackageDescription
 
 let package = Package(name: "PSACommon",
-                      platforms: [ .iOS(.v10) ],
+                      platforms: [.iOS(.v10)],
                       products: [.library(name: "PSACommon", targets: ["PSACommon"])],
-                      targets: [.target(name: "PSACommon"]
+                      targets: [.target(name: "PSACommon")]
+                     )
