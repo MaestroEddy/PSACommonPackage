@@ -7,5 +7,5 @@ let package = Package(name: "PSACommon",
                       products: [.library(name: "PSACommon", targets: ["PSACommon"])],
                       targets: [.binaryTarget(name: "PSACommon", 
                                               url: "https://github.com/MaestroEddy/PSACommonPackage/blob/main/PSACommon.xcframework.zip", 
-                                              checksum: "28bf2da3446bb30cda02d7d07327ea8943c60e481f164060cfcc3414fb494828")]
+                                              checksum: "06587d9d6d16eb51cd962e3a0d417371f03b830d083840f8bf0e75f4df603cef")]
                      )
